@@ -43,7 +43,7 @@ class WebCrawler:
             full_url = urljoin(url, href)
 
             # проверка, что ссылка ведет на тот же сайт
-            if urlparse(full_url).netloc == self.domain:
+            if urlparse(full_url).netloc == self.domain and f"{self.domain}/news" in full_url:
                 links.add(full_url)
 
         return links
@@ -76,5 +76,5 @@ class WebCrawler:
 
 if __name__ == "__main__":
     # указываем стартовую ссылку для сбора ссылок
-    crawler = WebCrawler("https://www.autonews.ru/tags/?tag=%D0%A1%D1%82%D0%B0%D1%82%D1%8C%D0%B8", max_urls=100)
+    crawler = WebCrawler("https://www.autonews.ru/news/67e29d239a79475f543ea9dd", max_urls=100)
     crawler.start()

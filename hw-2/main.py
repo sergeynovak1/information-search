@@ -7,7 +7,7 @@ from nltk.corpus import stopwords
 
 
 class TextProcessor:
-    def __init__(self, html_dir='./pages', tokens_dir='./tokens', lemmas_dir='./lemmas'):
+    def __init__(self, html_dir='hw-2/pages', tokens_dir='hw-2/tokens', lemmas_dir='hw-2/lemmas'):
         self.html_dir = html_dir
         self.tokens_dir = tokens_dir
         self.lemmas_dir = lemmas_dir

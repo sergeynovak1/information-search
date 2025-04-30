@@ -76,7 +76,7 @@ class InvertedIndexSaver:
 
 if __name__ == "__main__":
     # Путь к директории с файлами токенов
-    directory_path = "../hw-2/lemmas"
+    directory_path = "./hw-2/lemmas"
 
     # Создание инвертированного индекса
     builder = InvertedIndexBuilder(directory_path)
